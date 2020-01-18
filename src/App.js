@@ -3,6 +3,7 @@ import './App.css';
 import classes from './App.module.css';
 import {ShiftEncode, ShiftDecode} from './components/Shift/Shift';
 import {MonoalphabetEncode, MonoalphabetDecode} from './components/Monoalphabet/Monoalphabet';
+import RSAEncode from './components/RSA/RSA';
 
 function App() {
   return (
@@ -24,11 +25,10 @@ function App() {
         <MonoalphabetDecode/>
       </div>
       <div className={classes.block}>
-        <h1>RSA cipher</h1>
-        <h2>Encode</h2>
-
-        <h2>Decode</h2>
-
+        <h1>RSA Cryptosystem</h1>
+        <p>Nagy prímszámoknál is max 2 karakterig működik. Sokkal nagyobb prímszámok kellenének ahhoz, hogy értelmesen működjön.</p>
+        <p>A program a wolfram alfa apiját használja, amin havonta max 2000 callt lehet csinálni. Ne bruteforceolj pls.</p>
+        <RSAEncode/>
       </div>
     </div>
   );
