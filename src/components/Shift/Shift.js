@@ -29,11 +29,13 @@ export class ShiftEncode extends Component{
             titkositott += String.fromCharCode(n);
         });
 
-        return (<div>
-            <label className={classes.label}>Eltolás: <input value={this.state.shift} onChange={e => this.changeShift(e)} type="number"/></label>
-            <label className={classes.label}>Titkosítandó szöveg: <input value={this.state.value} onChange={e => this.changeValue(e)} type="text"/></label>
-            <label className={classes.label}>Titkosított szöveg: <input type="text" value={titkositott} disabled/></label>
-        </div>);
+        return (
+            <div>
+                <label className={classes.label}>Eltolás: <input value={this.state.shift} onChange={e => this.changeShift(e)} type="number"/></label>
+                <label className={classes.label}>Titkosítandó szöveg: <input value={this.state.value} onChange={e => this.changeValue(e)} type="text"/></label>
+                <label className={classes.label}>Titkosított szöveg: <input type="text" value={titkositott} disabled/></label>
+            </div>
+        );
     }
 }
 
@@ -65,10 +67,12 @@ export class ShiftDecode extends Component{
             eredeti += String.fromCharCode(n);
         });
 
-        return (<div>
-            <label className={classes.label}>Eltolás: <input value={this.state.shift} onChange={e => this.changeShift(e)} type="number"/></label>
-            <label className={classes.label}>Titkosított szöveg: <input value={this.state.value} onChange={e => this.changeValue(e)} type="text"/></label>
-            <label className={classes.label}>Eredeti szöveg: <input type="text" value={eredeti} disabled/></label>
-        </div>);
+        return (
+            <div>
+                <label className={classes.label}>Eltolás: <input value={this.state.shift} onChange={e => this.changeShift(e)} type="number"/></label>
+                <label className={classes.label}>Titkosított szöveg: <input value={this.state.value} onChange={e => this.changeValue(e)} type="text"/></label>
+                <label className={classes.label}>Eredeti szöveg: <input type="text" value={eredeti} disabled/></label>
+            </div>
+        );
     }
 }
